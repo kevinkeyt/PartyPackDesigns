@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="33T-8N-P0J">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Party Packs Table View Controller - Photo Prop Sets-->
+        <scene sceneID="Txj-LI-Afg">
+            <objects>
+                <tableViewController id="2DM-iZ-hOy" customClass="PartyPacksTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="52" sectionHeaderHeight="22" sectionFooterHeight="22" id="NTK-p5-Pmx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="52" id="zlb-7F-TSJ">
+                                <rect key="frame" x="0.0" y="86" width="320" height="52"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zlb-7F-TSJ" id="DAf-gy-z86">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="51"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2DM-iZ-hOy" id="amg-Fz-YJM"/>
+                            <outlet property="delegate" destination="2DM-iZ-hOy" id="PlU-sm-SBM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Photo Prop Sets" id="evz-L2-qhG"/>
+                    <connections>
+                        <segue destination="dfD-nz-dgP" kind="push" identifier="packitems" id="dyr-z6-6a4"/>
+                        <segue destination="Q1R-Tp-8e4" kind="push" identifier="infoview" id="0aw-Sf-2zh"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KJt-tt-7lh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="455" y="144"/>
+        </scene>
+        <!--Pack Items Table View Controller-->
+        <scene sceneID="kdT-Gj-mul">
+            <objects>
+                <tableViewController storyboardIdentifier="PackItemsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dfD-nz-dgP" customClass="PackItemsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" sectionHeaderHeight="22" sectionFooterHeight="22" id="OuI-pV-FMI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ItemCell" rowHeight="53" id="OCu-4h-iMd">
+                                <rect key="frame" x="0.0" y="86" width="320" height="53"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OCu-4h-iMd" id="oee-26-I0U">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dfD-nz-dgP" id="pVt-MP-xo6"/>
+                            <outlet property="delegate" destination="dfD-nz-dgP" id="fEZ-UX-pQK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="e2M-la-463"/>
+                    <connections>
+                        <outlet property="tblPackFiles" destination="OuI-pV-FMI" id="meb-tu-d0T"/>
+                        <segue destination="pJf-vs-LcI" kind="push" identifier="detailview" id="bSF-8U-ma7"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x45-in-Mad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824" y="144"/>
+        </scene>
+        <!--File Details View Controller-->
+        <scene sceneID="XYy-L7-WF3">
+            <objects>
+                <viewController id="pJf-vs-LcI" customClass="FileDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ufv-td-Vqp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="File Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ViT-xp-hk5">
+                                <rect key="frame" x="20" y="273" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ElI-sH-oFe"/>
+                    <connections>
+                        <outlet property="lblFileName" destination="ViT-xp-hk5" id="gX1-bO-qif"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OdZ-vd-lSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1196" y="146"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W1x-ow-VVf">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="33T-8N-P0J" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nZA-dj-ufS"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="12E-rO-1Mx">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2DM-iZ-hOy" kind="relationship" relationship="rootViewController" id="KoS-RA-aUB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jln-t0-QL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32" y="138"/>
+        </scene>
+        <!--Info View Controller - Info-->
+        <scene sceneID="SIY-0Y-g6e">
+            <objects>
+                <viewController storyboardIdentifier="InfoViewController" title="Info" id="Q1R-Tp-8e4" customClass="InfoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W82-WM-hMV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="550"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="lrB-sn-cBX">
+                                <rect key="frame" x="0.0" y="60" width="320" height="490"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="c2g-9n-kDW">
+                                        <rect key="frame" x="4" y="61" width="308" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="amandakeyt.com">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnViewSiteClick:" destination="Q1R-Tp-8e4" eventType="touchUpInside" id="UUL-lv-7s0"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nIR-sO-uXE">
+                                        <rect key="frame" x="26" y="265" width="280" height="212"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">1. Select the prop you would like to print. 2. Use the share button to print the document from your connected Air Print Printer. 3. Cut the props out. 4. Glue sticks to the back of your props. 5. STRIKE A POSE!!</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW TO:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fp8-t8-na5">
+                                        <rect key="frame" x="20" y="249" width="280" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUPPLIES NEEDED:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iN1-H7-bct">
+                                        <rect key="frame" x="20" y="95" width="280" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Cardstock - Color Printer - Scissors - Glue - Sticks" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vwm-ce-CDj">
+                                        <rect key="frame" x="26" y="106" width="280" height="135"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visit my website for complete photo booth prop sets." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="heh-0f-oAd">
+                                        <rect key="frame" x="4" y="5" width="308" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gCa-WV-grf"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="btnViewSite" destination="c2g-9n-kDW" id="6oZ-4e-Ewi"/>
+                        <outlet property="scrollView" destination="lrB-sn-cBX" id="28f-l1-mPB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7u-G5-v1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733" y="871"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
